@@ -1,0 +1,29 @@
+{
+  "name": "filescanner",
+  "version": "1.0.0",
+  "description": "Scan files for filesizes and info",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.0",
+    "ejs": "~1.0.0",
+    "express": "^4.13.3",
+    "morgan": "~1.0.0",
+    "q": "^1.4.1",
+	"multer":"^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Victor Tang",
+  "license": "ISC",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@heroku.com:filescanner.git"
+  }
+}
