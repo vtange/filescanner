@@ -10,10 +10,10 @@
 </head>
 <body data-ng-app="filescanner" data-ng-controller="MainCtrl">
   <div class="content centered" style="top:30%">
-	  <form data-ng-submit="fileScan()">
+	  <form>
 		<input type="file" id="fileUpload" />
-		<input type="button" id="upload" value="Submit" />
+		<input type="button" id="upload" value="Submit" data-ng-click="fileScan()"/>
 	  </form>
-
+	  <div id="editor"></div>
   </div>
 </body>

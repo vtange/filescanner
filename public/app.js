@@ -4,24 +4,20 @@
 
 app.controller('MainCtrl', ['$scope', '$http', '$window', function($scope, $http, $window){
 
-	$scope.scanFile = function(){
-	    var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv|.txt)$/;
+	$scope.fileScan = function(){
+		console.log($("#fileUpload").val());
+	    var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv|.txt|.tsv)$/;
         if (regex.test($("#fileUpload").val().toLowerCase())) {
             if (typeof (FileReader) != "undefined") {
                 var reader = new FileReader();
                 reader.onload = function (e) {
-                    var table = $("<table />");
-                    var rows = e.target.result.split("\n");
-                    for (var i = 0; i < rows.length; i++) {
-                        var row = $("<tr />");
-                        var cells = rows[i].split(",");
-                        for (var j = 0; j < cells.length; j++) {
-                            var cell = $("<td />");
-                            cell.html(cells[j]);
-                            row.append(cell);
-                        }
-                        table.append(row);
-                    }
+					var table = $("<table></table>");
+					var rows = e.target.result.split("\n");
+					for (var i = 0; i < rows.length; i++) {
+						var row = $("<tr />");
+						row.html(rows[i]);
+						table.append(row);
+					}
                     $("#editor").html('');
                     $("#editor").append(table);
                 }
