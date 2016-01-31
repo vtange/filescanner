@@ -5,7 +5,7 @@ var upload = multer({ storage: storage, dest: './tmp/'});
 
 var uploadFile = function(req, res) {
 	console.log(req.file);
-	res.send(req.file);
+	res.send(JSON.stringify(req.file));
 }
 // routes.js
 module.exports = function(app) {
