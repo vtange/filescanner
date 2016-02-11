@@ -1,4 +1,3 @@
-var Q = require('q');
 var multer  = require('multer');
 var storage = multer.memoryStorage();
 var upload = multer({ storage: storage, dest: './tmp/'});
