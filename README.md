@@ -6,4 +6,4 @@ Client uploads a file, Server tells client its filesize.
 Express, Angular, multer
  
 ## Niceties
-Basic File upload (get file info)
+Basic File upload (get file info) (Uses Jquery & PlainJS)
